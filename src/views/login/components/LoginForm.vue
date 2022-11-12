@@ -1,14 +1,14 @@
 <template>
     <el-form ref="formRef" :model="form" :rules="rules">
         <el-form-item prop="username">
-            <el-input :prefix-icon="User" size="large" placeholder="用户名："/>
+            <el-input v-model="form.username" :prefix-icon="User" size="large" clearable placeholder="用户名：admin"/>
         </el-form-item>
         <el-form-item prop="password">
-            <el-input :prefix-icon="Lock" size="large" placeholder="密码："/>
+            <el-input v-model="form.password" type="password" :prefix-icon="Lock" size="large" show-password clearable placeholder="密码：123456"/>
         </el-form-item>
         <div class="form-btn">
-            <el-button :icon="CircleClose" round size="large">重置</el-button>
-            <el-button type="primary" :icon="UserFilled" round size="large">登录</el-button>
+            <el-button :icon="CircleClose" round size="large" @click="handleReset(formRef)">重置</el-button>
+            <el-button type="primary" :icon="UserFilled" round size="large" @click="handleLogin">{{ $t('login') }}</el-button>
         </div>
     </el-form>
 </template>
@@ -20,14 +20,19 @@
 
     const formRef = ref<FormInstance>()
     const form = reactive({
-        username: '',
-        password: ''
+        username: 'admin',
+        password: '123456'
     })
-
     const rules = reactive<FormRules>({
         username: [{ required: true, message: '账号不能为空' }],
         password: [{ required: true, message: '密码不能为空' }],
     })
+
+    const handleReset = (formEl: FormInstance | undefined) => {
+        if(!formEl) return
+        formEl.resetFields()
+    }
+    const handleLogin = () => {}
 </script>
 
 <style scoped>

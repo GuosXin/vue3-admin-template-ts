@@ -47,26 +47,27 @@
 		right: 3.2%;
     }
     .login-left{
-        width: 750px;
+        width: 730px;
     }
     .login-right{
-        width: 450px;
+        width: 430px;
         padding: 50px 40px 45px;
         background-color: var(--login-bg-color);
         box-shadow: 2px 3px 7px var(--shadow-color);
         border-radius: 10px;
     }
     .login-header {
-        margin-bottom: 20px;
+        margin-bottom: 45px;
         display: flex;
         align-items: center;
         justify-content: center;
     }
     .login-header img{
-        width: 68px;
+        width: 60px;
     }
     .login-header h1{
-        font-size: 40px;
+        margin: 0;
+        font-size: 42px;
         color: var(--text-color);
         padding-left: 25px;
     }
