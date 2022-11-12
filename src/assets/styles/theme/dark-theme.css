@@ -1,0 +1,13 @@
+/* 自定义暗黑主题变量 */
+
+.dark body {
+    --bg-color: #000;
+    --text-color: rgba(255, 255, 255, 0.85);
+    --grey-1: #191919;
+    --mask-color: #000c;
+    --shadow-color: rgb(161 161 161 / 20%);
+    --login-bg-color: #141414;;
+
+    /* color: var(--text-color);
+    background-color: var(--bg-color); */
+}

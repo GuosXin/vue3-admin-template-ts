@@ -1,0 +1,13 @@
+/* 自定义主题变量 */
+
+body {
+    --bg-color: #fff;
+    --text-color: #34495e;
+    --grey-1: #eee;
+    --mask-color: #fffc;
+    --shadow-color: #0003;
+    --login-bg-color: transparent;
+
+    /* color: var(--text-color);
+    background-color: var(--bg-color); */
+}

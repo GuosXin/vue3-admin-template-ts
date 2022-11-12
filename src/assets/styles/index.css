@@ -1,0 +1,12 @@
+@import url('./theme/light-theme.css');
+@import url('./theme/dark-theme.css');
+
+body{
+    margin: 0;
+}
+
+.flex-center{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
