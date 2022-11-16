@@ -17,6 +17,7 @@
     import { User, Lock, CircleClose, UserFilled } from '@element-plus/icons-vue'
     import { reactive, ref } from 'vue'
     import type { FormInstance, FormRules } from 'element-plus'
+    import { Login } from '@/api/index'
 
     const formRef = ref<FormInstance>()
     const form = reactive({
@@ -32,7 +33,25 @@
         if(!formEl) return
         formEl.resetFields()
     }
-    const handleLogin = () => {}
+    const handleLogin = async () => {
+        try{
+            Login(form)
+            Login(form)
+            Login(form)
+            Login(form)
+            Login(form)
+            Login(form)
+            Login(form)
+            Login(form)
+            Login(form)
+            Login(form)
+            Login(form)
+            Login(form)
+            Login(form)
+        }catch(err){
+            console.log(err)
+        }
+    }
 </script>
 
 <style scoped>
