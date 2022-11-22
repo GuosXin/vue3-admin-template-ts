@@ -6,7 +6,10 @@
     --grey-1: #191919;
     --mask-color: #000c;
     --shadow-color: rgb(161 161 161 / 20%);
-    --login-bg-color: #141414;;
+    --login-bg-color: #141414;
+    --aside-bg-color: #121212;
+    --aside-login-border-color: #414243;
+
 
     /* color: var(--text-color);
     background-color: var(--bg-color); */

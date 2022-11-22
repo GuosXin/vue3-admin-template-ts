@@ -1,0 +1,15 @@
+{
+    "code": "200",
+    "data": [{
+        "path": "/layout",
+        "name": "layout",
+        "component": "/src/layout/index.vue",
+        "children": [
+            {
+                "name": "home",
+                "path": "/home",
+                "component": "/src/views/home/index.vue"
+            }
+        ]
+    }]
+}

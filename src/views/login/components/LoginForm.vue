@@ -17,7 +17,8 @@
     import { User, Lock, CircleClose, UserFilled } from '@element-plus/icons-vue'
     import { reactive, ref } from 'vue'
     import type { FormInstance, FormRules } from 'element-plus'
-    import { Login } from '@/api/index'
+    import { login } from '@/api/index'
+    import { useRouter } from 'vue-router'
 
     const formRef = ref<FormInstance>()
     const form = reactive({
@@ -28,6 +29,7 @@
         username: [{ required: true, message: '账号不能为空' }],
         password: [{ required: true, message: '密码不能为空' }],
     })
+    const router = useRouter()
 
     const handleReset = (formEl: FormInstance | undefined) => {
         if(!formEl) return
@@ -35,19 +37,8 @@
     }
     const handleLogin = async () => {
         try{
-            Login(form)
-            Login(form)
-            Login(form)
-            Login(form)
-            Login(form)
-            Login(form)
-            Login(form)
-            Login(form)
-            Login(form)
-            Login(form)
-            Login(form)
-            Login(form)
-            Login(form)
+            const res = await login(form)
+            router.push('/home')
         }catch(err){
             console.log(err)
         }

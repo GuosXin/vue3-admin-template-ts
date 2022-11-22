@@ -5,7 +5,7 @@ import type { ResultData } from '@/api/interface/resultTypes'
 import { ElMessage } from 'element-plus'
 import { addAbortController, removeAbortController } from './abortController'
 
-// 给请求配置添加isLoading字段
+// 定义请求配置参数的类型，添加isLoading字段，用于判断是否需要开启loading
 export interface Config extends AxiosRequestConfig{
     isLoading?: Boolean;
 }
@@ -44,7 +44,7 @@ class RequestHttp {
             // 请求结束后，移除本次请求，并关闭请求loading
             removeAbortController(response.config)
             hideFullLoading()
-            return response
+            return response.data
         }, (error: any) => {
             // 请求出错后，移除本次请求，并关闭请求loading、弹窗提示错误信息
             removeAbortController(error.config)
@@ -57,10 +57,10 @@ class RequestHttp {
         })
     };
     // 不同请求类型
-    get<T>(url: string, data?: object, config?: Config): Promise<ResultData<T>>{
+    get<T>(url: string, data: object = {}, config: Config = { isLoading: true }): Promise<ResultData<T>>{
         return this.service.get(url, { params: data, ...config })
     };
-    post<T>(url: string, data?: object, config?: Config): Promise<ResultData<T>>{
+    post<T>(url: string, data: object = {}, config: Config = { isLoading: true }): Promise<ResultData<T>>{
         return this.service.post(url, data, config)
     };
 }
