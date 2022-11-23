@@ -4,5 +4,5 @@
 
 <script setup lang='ts'>
   import { useTheme } from "@/utils/hooks/useTheme"
-  useTheme()
+  useTheme().initTheme()
 </script>

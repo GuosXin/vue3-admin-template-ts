@@ -14,9 +14,16 @@ export interface Login{
 
 // 菜单
 export interface Menu{
-    name: string,
+    name: string,   // 路由记录独一无二的名称
     path: string,
-    component: string | Object,
+    component: string | object,
+    meta: {
+        title: string
+        icon?: string
+        isLayout?: string,  // 是否属于layout的子路由(只在最顶部的菜单生效)
+        isMenu?: string,    // 是否放到菜单里
+        isLink?: string // 是否新标签页打开
+    },
     children?: Array<Menu>,
     redirect?: boolean
 }

@@ -6,50 +6,28 @@
         </div>
         <el-scrollbar>
             <el-menu
+                :default-active="route.path"
                 :collapse="configStore.collapse"
                 background-color="var(--aside-bg-color)"
                 text-color="#ffffffd9"
                 active-text-color="#fff"
                 :collapse-transition="false"
             >
-                <el-menu-item index="1">
-                    <el-icon><HomeFilled/></el-icon>
-                    <template #title>
-                        <span>首页</span>
-                    </template>
-                </el-menu-item>
-                <el-sub-menu index="2">
-                    <template #title>
-                        <el-icon><Menu/></el-icon>
-                        <span>嵌套菜单</span>
-                    </template>
-                    <el-menu-item index="2-1">
-                        <el-icon><Menu/></el-icon>
-                        <span>2-1</span>
-                    </el-menu-item>
-                    <el-menu-item index="2-2">
-                        <el-icon><Menu/></el-icon>
-                        <span>2-2</span>
-                    </el-menu-item>
-                    <el-sub-menu index="2-3">
-                        <template #title>
-                            <el-icon><Menu/></el-icon>
-                            <span>二级菜单</span>
-                        </template>
-                        <el-menu-item index="2-3-1">3-1</el-menu-item>
-                        <el-menu-item index="2-3-2">3-2</el-menu-item>
-                        <el-menu-item index="2-3-3">3-3</el-menu-item>
-                    </el-sub-menu>
-                </el-sub-menu>
+                <Submenu :menuList="authStore.menuList"/>
             </el-menu>
         </el-scrollbar>
     </div>
 </template>
 
 <script setup lang="ts">
-    import { useConfigStore } from "@/stores/config"
+    import { useConfigStore } from '@/stores/config'
+    import { useAuthStore } from '@/stores/auth'
+    import Submenu from './components/Submenu.vue'
+    import { useRoute } from 'vue-router'
 
     const configStore = useConfigStore()
+    const authStore = useAuthStore()
+    const route = useRoute()
 </script>
 
 <style scoped>
@@ -78,17 +56,5 @@
     }
     .el-menu{
         border: none;
-    }
-    .el-menu-item.is-active{
-        background-color: #060708;
-    }
-    .el-menu-item.is-active::before{
-        content: '';
-        position: absolute;
-        top: 0;
-        bottom: 0;
-        left: 0;
-        width: 4px;
-        background: var(--el-color-primary);
     }
 </style>

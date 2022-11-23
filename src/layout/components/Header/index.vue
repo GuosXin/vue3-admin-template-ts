@@ -1,11 +1,15 @@
 <template>
     <div class="header-bar">
-        <Collapse/>
+        <div class="flex-center">
+            <Collapse style="margin-right: 20px;"/>
+            <Breadcrumb/>
+        </div>
     </div>
 </template>
 
 <script setup lang="ts">
 import Collapse from './components/Collapse.vue'
+import Breadcrumb from './components/Breadcrumb.vue'
 </script>
 
 <style scoped>

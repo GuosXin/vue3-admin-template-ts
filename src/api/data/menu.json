@@ -1,15 +1,84 @@
 {
     "code": "200",
     "data": [{
-        "path": "/layout",
-        "name": "layout",
-        "component": "/src/layout/index.vue",
+        "path": "/home",
+        "name": "home",
+        "component": "/src/views/home/index.vue",
+        "meta": {
+            "title": "首页",
+            "icon": "HomeFilled"
+        }
+    },
+    {
+        "path": "/nestingMenu",
+        "name": "nestingMenu",
+        "meta": {
+            "title": "嵌套菜单",
+            "icon": "Menu"
+        },
         "children": [
             {
-                "name": "home",
-                "path": "/home",
-                "component": "/src/views/home/index.vue"
+                "path": "/nestingMenu/menu1",
+                "name": "menu1",
+                "component": "/src/views/nestingMenu/menu1/index.vue",
+                "meta": {
+                    "title": "1-1",
+                    "icon": "Menu"
+                }
+            },
+            {
+                "path": "/nestingMenu/menu2",
+                "name": "menu2",
+                "meta": {
+                    "title": "二级菜单",
+                    "icon": "Menu"
+                },
+                "children": [
+                    {
+                        "path": "/nestingMenu/menu2/menu21",
+                        "name": "menu21",
+                        "component": "/src/views/nestingMenu/menu2/menu21/index.vue",
+                        "meta": {
+                            "title": "2-1"
+                        }
+                    },
+                    {
+                        "path": "/nestingMenu/menu2/menu22",
+                        "name": "menu22",
+                        "component": "/src/views/nestingMenu/menu2/menu22/index.vue",
+                        "meta": {
+                            "title": "2-2"
+                        }
+                    }
+                ]
             }
         ]
+    },{
+        "path": "/notLayout",
+        "name": "notLayout",
+        "component": "/src/views/notLayout/index.vue",
+        "meta": {
+            "title": "非layout组件",
+            "icon": "Menu",
+            "isLayout": "false",
+            "isMenu": "true"
+        }
+    },{
+        "path": "/link",
+        "name": "link",
+        "component": "/src/views/notLayout/index.vue",
+        "meta": {
+            "title": "外部链接",
+            "icon": "Menu",
+            "isLink": "https://www.baidu.com"
+        }
+    },{
+        "path": "/notMenu",
+        "name": "notMenu",
+        "component": "/src/views/notMenu/index.vue",
+        "meta": {
+            "title": "不在菜单栏显示",
+            "isMenu": "false"
+        }
     }]
 }
