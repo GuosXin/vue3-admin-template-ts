@@ -1,3 +1,5 @@
 export default {
-    login: 'Login'
+    login: 'Login',
+    zh: 'Chinese',
+    en: 'English'
 }

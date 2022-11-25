@@ -1,6 +1,8 @@
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 
+import { setStorage } from './stores/plugins/setStorage'
+
 import App from './App.vue'
 import router from './router'
 
@@ -17,7 +19,10 @@ import i18n from "@/i18n/index"
 
 const app = createApp(App)
 
-app.use(createPinia())
+const pinia = createPinia()
+pinia.use(setStorage)
+
+app.use(pinia)
 app.use(router)
 app.use(ElementPlus)
 for (const [key, component] of Object.entries(ElementPlusIconsVue)) {

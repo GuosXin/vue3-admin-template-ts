@@ -4,12 +4,16 @@
             <Collapse style="margin-right: 20px;"/>
             <Breadcrumb/>
         </div>
+        <div class="flex-center">
+            <Language/>
+        </div>
     </div>
 </template>
 
 <script setup lang="ts">
-import Collapse from './components/Collapse.vue'
-import Breadcrumb from './components/Breadcrumb.vue'
+    import Collapse from './components/Collapse.vue'
+    import Breadcrumb from './components/Breadcrumb.vue'
+    import Language from './components/Language.vue'
 </script>
 
 <style scoped>
@@ -18,5 +22,6 @@ import Breadcrumb from './components/Breadcrumb.vue'
         height: 100%;
         display: flex;
         align-items: center;
+        justify-content: space-between;
     }
 </style>
