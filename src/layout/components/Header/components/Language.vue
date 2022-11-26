@@ -21,7 +21,7 @@
 
 <style scoped>
     .language-wrap{
-        padding: 0 12px;
+        padding: 0 10px;
     }
     .icon-language{
         font-size: 22px;

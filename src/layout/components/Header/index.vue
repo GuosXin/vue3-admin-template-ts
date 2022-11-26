@@ -6,6 +6,7 @@
         </div>
         <div class="flex-center">
             <Language/>
+            <ThemeSetting/>
         </div>
     </div>
 </template>
@@ -14,6 +15,7 @@
     import Collapse from './components/Collapse.vue'
     import Breadcrumb from './components/Breadcrumb.vue'
     import Language from './components/Language.vue'
+    import ThemeSetting from './components/ThemeSetting.vue'
 </script>
 
 <style scoped>
