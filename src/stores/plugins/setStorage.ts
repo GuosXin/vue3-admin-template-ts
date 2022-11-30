@@ -10,24 +10,22 @@ export const setStorage = ({ store, options }: PiniaPluginContext) => {
          */
         let oldVal = getLocalStorage(store.$id)
         let newVal = Object.assign({}, store.$state, oldVal)    // 合并storage和state数据
-        let resetVal: any = {}
         if(typeof localStorage === 'boolean'){
             // 如果是布尔值，能执行到这里说明是true，根据storage同步所有state的值
             Object.keys(store.$state).forEach(item => {
                 store.$state[item] = newVal[item]
-                resetVal[item] = newVal[item]
             })
-        }else if(localStorage instanceof Array){
-            // 如果是数组，找出交集，再根据storage同步state的值
+        }
+        // 如果是数组，找出交集，再根据storage同步state的值
+        else if(localStorage instanceof Array){
             Object.keys(store.$state).forEach((item: string) => {
                 if((<string[]>localStorage).includes(item)){
                     store.$state[item] = newVal[item]
-                    resetVal[item] = newVal[item]
                 }
             })
         }
-        // 更新localStorage，使用 setLocalStorage(store.$id, Object.assign({}, oldVal, resetVal)) 替换下面一行代码可避免破坏性更新storage，根据需求使用
-        setLocalStorage(store.$id, resetVal)
+        // 更新localStorage，使用 setLocalStorage(store.$id, Object.assign({}, oldVal, store.$state)) 替换下面一行代码可避免破坏性更新storage，根据需求使用
+        setLocalStorage(store.$id, store.$state)
 
 
         /**

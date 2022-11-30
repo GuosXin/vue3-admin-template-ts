@@ -14,13 +14,14 @@
   import zhCn from 'element-plus/dist/locale/zh-cn.mjs'
   import en from 'element-plus/dist/locale/en.mjs'
 
+  // 初始化语言
+  useLanguage().setLanguage()
+  
   // 初始化主题
   let theme = useTheme()
   theme.setDarkTheme()
   theme.setPrimary()
 
-  // 初始化语言
-  useLanguage().setLanguage()
 
   let configStore = useConfigStore()
   let locale = computed(() => {
