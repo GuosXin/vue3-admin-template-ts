@@ -2,6 +2,7 @@ import { createRouter, createWebHashHistory } from 'vue-router'
 import { useAuthStore } from '@/stores/auth'
 import { ElNotification } from 'element-plus'
 import { addDynamicRouter } from './dynamicRouter'
+import NProgress from '@/utils/nprogress'
 
 const router = createRouter({
     history: createWebHashHistory(),
@@ -39,6 +40,7 @@ const router = createRouter({
  * 前置守卫
  */
 router.beforeEach(async (to, from, next) => {
+    NProgress.start()
     // 获取authStore
     const auth = useAuthStore()
 
@@ -73,5 +75,22 @@ router.beforeEach(async (to, from, next) => {
 
     next()
 })
+
+
+/**
+ * 后置守卫
+ */
+router.afterEach(() => {
+    NProgress.done()
+})
+
+
+/**
+ * 导航错误
+ */
+router.onError(() => {
+    NProgress.done()
+})
+
 
 export default router

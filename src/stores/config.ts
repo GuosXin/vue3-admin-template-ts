@@ -4,7 +4,8 @@ export const useConfigStore = defineStore('config', {
     state: () => ({
         collapse: false,
         isDarkTheme: false,
-        language: 'zh'
+        language: 'zh',
+        themeColor: '#409EFF'
     }),
     actions: {
         toggleCollapse(){
@@ -12,6 +13,6 @@ export const useConfigStore = defineStore('config', {
         },
     },
     setStorage: {
-        localStorage: ['isDarkTheme', 'language']
+        localStorage: ['isDarkTheme', 'language', 'themeColor']
     }
 })

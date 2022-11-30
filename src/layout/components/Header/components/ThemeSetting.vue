@@ -1,6 +1,14 @@
 <template>
-    <i class="iconfont icon-pifu" @click="$emit('openThemeDrawer')"/>
+    <i class="iconfont icon-pifu" @click="handleClick"/>
 </template>
+
+<script setup lang="ts">
+    import Bus from '@/utils/bus'
+
+    const handleClick = () => {
+        Bus.$emit('openDrawer')
+    }
+</script>
 
 <style scoped>
     .icon-pifu{

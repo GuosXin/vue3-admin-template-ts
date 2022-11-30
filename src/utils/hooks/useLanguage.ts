@@ -9,7 +9,7 @@ export const useLanguage = () => {
      * 设置语言
      * @param language 'zh' | 'en'
      */
-    const setLanguage = (language: string) => {
+    const setLanguage = (language: string = configStore.language) => {
         i18n.locale.value = language
         configStore.language = language
     }

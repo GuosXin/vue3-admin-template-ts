@@ -7,6 +7,8 @@
         <div class="flex-center">
             <Language/>
             <ThemeSetting/>
+            <FullScreen/>
+            <Avatar/>
         </div>
     </div>
 </template>
@@ -16,6 +18,8 @@
     import Breadcrumb from './components/Breadcrumb.vue'
     import Language from './components/Language.vue'
     import ThemeSetting from './components/ThemeSetting.vue'
+    import FullScreen from './components/FullScreen.vue'
+    import Avatar from './components/Avatar.vue'
 </script>
 
 <style scoped>

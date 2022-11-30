@@ -13,11 +13,13 @@
             <el-footer>Footer</el-footer>
         </el-container>
     </el-container>
+    <ThemeDrawer/>
 </template>
 
 <script setup lang="ts">
     import Aside from "./components/Aside/index.vue"
     import Header from "./components/Header/index.vue"
+    import ThemeDrawer from "./components/ThemeDrawer/index.vue"
 </script>
 
 <style scoped>

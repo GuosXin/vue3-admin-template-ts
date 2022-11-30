@@ -25,7 +25,7 @@ pinia.use(setStorage)
 app.use(pinia)
 app.use(router)
 app.use(ElementPlus)
-for (const [key, component] of Object.entries(ElementPlusIconsVue)) {
+for (const [key, component] of Object.entries(ElementPlusIconsVue)) {   //注册所有element icon
     app.component(key, component)
 }
 app.use(i18n)
