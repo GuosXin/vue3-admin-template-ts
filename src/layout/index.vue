@@ -7,6 +7,7 @@
             <el-header>
                 <Header/>
             </el-header>
+            <Tabs/>
             <el-main>
                 <router-view />
             </el-main>
@@ -20,6 +21,7 @@
     import Aside from "./components/Aside/index.vue"
     import Header from "./components/Header/index.vue"
     import ThemeDrawer from "./components/ThemeDrawer/index.vue"
+    import Tabs from "./components/Tabs/index.vue"
 </script>
 
 <style scoped>

@@ -12,6 +12,10 @@
         let el = document.documentElement
         isFull.value ? el.requestFullscreen() : document.exitFullscreen()
     }
+
+    window.addEventListener('fullscreenchange', function(e){
+        isFull.value = document.fullscreenElement ? true : false
+    })
 </script>
 
 <style scoped>
