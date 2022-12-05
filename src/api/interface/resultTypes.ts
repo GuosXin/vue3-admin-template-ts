@@ -20,9 +20,9 @@ export interface Menu{
     meta: {
         title: string
         icon?: string
-        isLayout?: string,  // 是否属于layout的子路由(只在最顶部的菜单生效)
-        isMenu?: string,    // 是否放到菜单里
-        isLink?: string // 是否新标签页中打开该链接，例：https://www.baidu.com
+        isLayout?: boolean,  // 是否属于layout的子路由(只在最顶部的菜单生效)
+        isMenu?: boolean,    // 是否放到菜单里
+        isLink?: string // 需要在新标签页中打开的链接，例：https://www.baidu.com
         isAffix?: boolean    // 是否固定在tab栏
     },
     children?: Array<Menu>,

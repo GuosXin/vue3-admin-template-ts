@@ -10,7 +10,7 @@ export const addDynamicRouter = (menuList: Menu[] = []) => {
     
     // 添加路由
     routeList.forEach(item => {
-        if(item.meta!.isLayout === 'false'){
+        if(item.meta!.isLayout === false){
             router.addRoute(<RouteRecordRaw>item)
         }else{
             router.addRoute('layout', <RouteRecordRaw>item)

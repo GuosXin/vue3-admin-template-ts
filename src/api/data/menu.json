@@ -59,10 +59,10 @@
         "name": "notLayout",
         "component": "/src/views/notLayout/index.vue",
         "meta": {
-            "title": "非layout组件",
+            "title": "非layout的子组件",
             "icon": "Menu",
-            "isLayout": "false",
-            "isMenu": "true"
+            "isLayout": false,
+            "isMenu": true
         }
     },{
         "path": "/link",
@@ -79,7 +79,7 @@
         "component": "/src/views/notMenu/index.vue",
         "meta": {
             "title": "不在菜单栏显示",
-            "isMenu": "false"
+            "isMenu": false
         }
     }]
 }

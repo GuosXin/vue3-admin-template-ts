@@ -30,11 +30,40 @@ export const setLocalStorage = (key: string, value: any) => {
 }
 
 /**
+ * 读取session缓存（进行转义）
+ * @param key 缓存的key键
+ * @returns 
+ */
+export const getSessionStorage = (key: string) => {
+    try{
+        let res = window.sessionStorage.getItem(key)
+        return res ? JSON.parse(res) : null
+    }catch(err){
+        return null
+    }
+}
+
+/**
+ * 设置session缓存（进行转义）
+ * @param key 缓存的key键
+ * @param value 缓存的value值
+ * @returns 
+ */
+export const setSessionStorage = (key: string, value: any) => {
+    try{
+        window.sessionStorage.setItem(key, JSON.stringify(value))
+        return true
+    }catch(err){
+        return false
+    }
+}
+
+/**
  * hex颜色转rgb颜色
  * @param str 颜色值字符串
  * @returns 返回处理后的颜色值
  */
- export function hexToRgb(str: any) {
+export function hexToRgb(str: any) {
 	let hexs: any = "";
 	let reg = /^\#?[0-9A-Fa-f]{6}$/;
 	if (!reg.test(str)) return ElMessage.warning("输入错误的hex");
@@ -65,7 +94,7 @@ export function rgbToHex(r: any, g: any, b: any) {
  * @param level 加深的程度，限0-1之间
  * @returns 返回处理后的颜色值
  */
- export function getDarkColor(color: string, level: number) {
+export function getDarkColor(color: string, level: number) {
 	let reg = /^\#?[0-9A-Fa-f]{6}$/;
 	if (!reg.test(color)) return ElMessage.warning("输入错误的hex颜色值");
 	let rgb = hexToRgb(color);

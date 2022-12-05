@@ -1,7 +1,7 @@
 <template>
     <template v-for="(item, index) in menuList" :key="index">
         <!-- 根据 meta.isMenu 判断该路由是否需要放到菜单里 -->
-        <template v-if="item.meta && item.meta.isMenu === 'false'" />
+        <template v-if="item.meta && item.meta.isMenu === false" />
 
         <!-- 可展开的菜单 -->
         <el-sub-menu v-else-if="item.children && item.children.length > 0" :index="item.path">
