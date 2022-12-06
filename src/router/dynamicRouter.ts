@@ -16,6 +16,12 @@ export const addDynamicRouter = (menuList: Menu[] = []) => {
             router.addRoute('layout', <RouteRecordRaw>item)
         }
     })
+
+    // 最后添加notfound路由
+    router.addRoute({
+        path: '/:pathMatch(.*)*',
+        redirect: '/404'
+    })
 }
 
 
