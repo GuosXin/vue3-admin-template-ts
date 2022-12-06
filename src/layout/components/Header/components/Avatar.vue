@@ -2,7 +2,7 @@
     <div class="avatar-bar flex-center">
         <div class="user-name">管理员</div>
         <el-dropdown trigger="click">
-            <el-avatar src="https://cube.elemecdn.com/3/7c/3ea6beec64369c2642b92c6726f1epng.png"/>
+            <el-avatar src="/src/assets/images/avatar.gif"/>
             <template #dropdown>
                 <el-dropdown-menu>
                     <el-dropdown-item :icon="User">个人信息</el-dropdown-item>

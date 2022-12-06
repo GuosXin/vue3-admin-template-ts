@@ -7,12 +7,14 @@ export const useTabsStore =  defineStore('tabs', {
         tabsList: [] as TabsItem[]
     }),
     actions: {
+        // Add Tabs
         addTabs(tabsItem: TabsItem) {
             let found = this.tabsList.find(item => item.path === tabsItem.path)
             if(!found){
                 this.tabsList.push(tabsItem)
             }
         },
+        // Remove Tabs
         removeTabs(tabPath: string){
             let route = router.currentRoute.value
             let tabsList = this.tabsList
@@ -26,9 +28,13 @@ export const useTabsStore =  defineStore('tabs', {
                     this.tabsList = tabsList
                 }
             })
+        },
+        // Close MultipleTab
+        closeMultipleTab(remainTab?: string){
+            this.tabsList = this.tabsList.filter(item => item.path === remainTab || !item.closable)
         }
     },
     setStorage: {
-        localStorage: ['tabsList']
+        sessionStorage: ['tabsList']
     }
 })

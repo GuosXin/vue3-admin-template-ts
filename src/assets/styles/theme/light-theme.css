@@ -8,7 +8,8 @@ body {
     --shadow-color: #0003;
     --login-bg-color: transparent;
     --aside-bg-color: #191a20;
-    --aside-login-border-color: #282a35;
+    --aside-logo-border-color: #282a35;
+    --main-bg-color: #f0f2f5;
 
     /* color: var(--text-color);
     background-color: var(--bg-color); */

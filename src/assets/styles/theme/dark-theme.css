@@ -8,8 +8,8 @@
     --shadow-color: rgb(161 161 161 / 20%);
     --login-bg-color: #141414;
     --aside-bg-color: #121212;
-    --aside-login-border-color: #414243;
-
+    --aside-logo-border-color: #414243;
+    --main-bg-color: #121212;
 
     /* color: var(--text-color);
     background-color: var(--bg-color); */

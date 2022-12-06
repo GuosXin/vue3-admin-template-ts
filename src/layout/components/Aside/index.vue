@@ -39,7 +39,7 @@
     }
     .logo-bar{
         height: 55px;
-        border-bottom: 1px solid var(--aside-login-border-color);
+        border-bottom: 1px solid var(--aside-logo-border-color);
     }
     .logo-bar img{
         width: 28px;

@@ -5,7 +5,7 @@
             :key="item.path"
             :label="item.title"
             :name="item.path"
-            :closable="item.close"
+            :closable="item.closable"
         >
             <template #label>
                 <span class="custom-tabs-label">
@@ -38,7 +38,7 @@
                 path: route.path,
                 title: route.meta.title,
                 icon: route.meta.icon,
-                close: !route.meta.isAffix
+                closable: !route.meta.isAffix
             })
         },
         {

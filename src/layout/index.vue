@@ -1,6 +1,6 @@
 <template>
     <el-container>
-        <el-aside class="side-bar">
+        <el-aside>
             <Aside/>
         </el-aside>
         <el-container>
@@ -11,7 +11,9 @@
             <el-main>
                 <router-view />
             </el-main>
-            <el-footer>Footer</el-footer>
+            <el-footer>
+                <Footer/>
+            </el-footer>
         </el-container>
     </el-container>
     <ThemeDrawer/>
@@ -22,12 +24,18 @@
     import Header from "./components/Header/index.vue"
     import ThemeDrawer from "./components/ThemeDrawer/index.vue"
     import Tabs from "./components/Tabs/index.vue"
+    import Footer from "./components/Footer/index.vue"
 </script>
 
 <style scoped>
-    .side-bar{
-        width: auto;
+    .el-container{
+        width: 100vw;
         height: 100vh;
+        overflow: hidden;
+    }
+    .el-aside{
+        width: auto;
+        height: 100%;
         min-height: 0;
         overflow: hidden;
         border-right: 1px solid var(--el-border-color-light);
@@ -36,5 +44,13 @@
         height: 55px;
         background-color: var(--el-bg-color);
         border-bottom: 1px solid var(--el-border-color-light);
+    }
+    .el-main{
+        background: var(--main-bg-color);
+        padding: 10px;
+    }
+    .el-footer{
+        height: auto;
+        border-top: 1px solid var(--el-border-color-light);
     }
 </style>
