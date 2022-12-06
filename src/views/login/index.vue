@@ -6,7 +6,7 @@
             <div class="login-right">
                 <div class="login-header">
                     <img src="@/assets/images/vue.svg"/>
-                    <h1>Vue3-Admin-Ts</h1>
+                    <h1>Vue3 Admin</h1>
                 </div>
                 <LoginForm/>
             </div>

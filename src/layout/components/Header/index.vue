@@ -2,7 +2,9 @@
     <div class="header-bar">
         <div class="flex-center">
             <Collapse style="margin-right: 20px;"/>
-            <Breadcrumb/>
+            <template v-if="configStore.isShowBreadcrumb">
+                <Breadcrumb/>
+            </template>
         </div>
         <div class="flex-center">
             <Language/>
@@ -20,6 +22,9 @@
     import ThemeSetting from './components/ThemeSetting.vue'
     import FullScreen from './components/FullScreen.vue'
     import Avatar from './components/Avatar.vue'
+    import { useConfigStore } from '@/stores/config'
+
+    let configStore = useConfigStore()
 </script>
 
 <style scoped>

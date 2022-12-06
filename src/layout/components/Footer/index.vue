@@ -1,6 +1,6 @@
 <template>
     <div class="footer flex-center">
-        <a href="https://github.com/HalseySpicy" target="_blank"> 2022 © Xin-Admin By Xin. </a>
+        <a href="https://github.com/HalseySpicy" target="_blank"> 2022 © Vue3-admin-template-ts By Xin. </a>
     </div>
 </template>
 

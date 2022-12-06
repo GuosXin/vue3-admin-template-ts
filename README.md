@@ -1,36 +1,19 @@
-## Project Setup
+# Vue 3.2 + TypeScript + Pinia + Element-Plus 管理系统
 
-```sh
+### 前言 📖
+
+本系统的样式及部分交互逻辑是模仿 https://github.com/HalseySpicy/Geeker-Admin 这个优秀的vue3后台管理系统，代码基本上是自己手撕的，只写了一个总体框架模板，目的只是为了学习vue3的组合式API写法以及typescript。
+
+### 安装使用步骤
+
+```text
+# 安装依赖
 npm install
-```
 
-### Compile and Hot-Reload for Development
-
-```sh
+# 启动项目
 npm run dev
-```
 
-### Type-Check, Compile and Minify for Production
-
-```sh
-npm run build
-```
-
-### Run Unit Tests with [Vitest](https://vitest.dev/)
-
-```sh
-npm run test:unit
-```
-
-### Run End-to-End Tests with [Cypress](https://www.cypress.io/)
-
-```sh
-npm run build
-npm run test:e2e # or `npm run test:e2e:ci` for headless testing
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
+# 打包项目
+npm run build:dev
+npm run build:pro
 ```

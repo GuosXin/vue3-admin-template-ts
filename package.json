@@ -1,5 +1,5 @@
 {
-  "name": "vue3-management-system",
+  "name": "vue3-admin-template-ts",
   "version": "0.0.0",
   "scripts": {
     "dev": "vite",

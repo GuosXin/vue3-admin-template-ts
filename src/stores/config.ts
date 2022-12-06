@@ -5,7 +5,8 @@ export const useConfigStore = defineStore('config', {
         collapse: false,
         isDarkTheme: false,
         language: 'zh',
-        themeColor: '#409EFF'
+        themeColor: '#009688',
+        isShowBreadcrumb: true
     }),
     actions: {
         toggleCollapse(){

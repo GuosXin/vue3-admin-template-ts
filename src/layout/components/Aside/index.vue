@@ -2,7 +2,7 @@
     <div class="menu" :style="{ width: configStore.collapse ? '65px' : '210px' }">
         <div class="logo-bar flex-center">
             <img src="@/assets/images/vue.svg"/>
-            <span v-show="!configStore.collapse">Xin Admin</span>
+            <span v-show="!configStore.collapse">Vue3 Admin</span>
         </div>
         <el-scrollbar>
             <el-menu
