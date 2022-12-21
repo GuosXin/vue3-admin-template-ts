@@ -1,8 +1,6 @@
 import { createApp } from 'vue'
 import { createPinia } from 'pinia'
 
-import { setStorage } from './stores/plugins/setStorage'
-
 import App from './App.vue'
 import router from './router'
 
@@ -17,10 +15,12 @@ import * as ElementPlusIconsVue from '@element-plus/icons-vue'  //element图标
 
 import i18n from "@/i18n/index"
 
+import setStoragePlugin from 'pinia-plugin-set-storage'
+
 const app = createApp(App)
 
 const pinia = createPinia()
-pinia.use(setStorage)
+pinia.use(setStoragePlugin)
 
 app.use(pinia)
 app.use(router)
