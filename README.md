@@ -2,7 +2,7 @@
 
 ### 前言 📖
 
-本系统的大部分样式及交互逻辑都是模仿 https://github.com/HalseySpicy/Geeker-Admin 这个优秀的vue3后台管理系统，代码基本上都是自己手撕的。在这里我只写了一个总体框架模板，目的也是为了学习vue3的组合式API写法以及typescript。
+本系统的大部分样式及交互逻辑都是模仿 https://github.com/HalseySpicy/Geeker-Admin 这个优秀的vue3后台管理系统，代码基本上都是自己手撕的。这里我只写了一个总体框架模板，目的在于学习vue3的组合式API写法以及typescript。
 
 ### 技术栈 📚
 
